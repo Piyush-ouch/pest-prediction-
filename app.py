@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import numpy as np
 import joblib
 from tensorflow.keras.models import load_model
@@ -13,6 +14,15 @@ import os
 import json
 
 app = FastAPI()
+
+# Add CORS middleware to allow requests from Flutter app
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods
+    allow_headers=["*"],  # Allows all headers
+)
 
 # -----------------------
 # STARTUP INITIALIZATION
