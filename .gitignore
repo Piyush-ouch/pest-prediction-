@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+venv/
+.env
+serviceAccountKey.json
+models/global_climate_autoencoder.h5
+models/global_climate_scaler.pkl

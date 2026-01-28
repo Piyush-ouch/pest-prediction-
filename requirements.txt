@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+tensorflow
+scikit-learn
+joblib
+firebase-admin
+requests
+numpy
+pandas
